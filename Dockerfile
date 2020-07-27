@@ -2,7 +2,7 @@ ARG ARCH="amd64"
 ARG OS="linux"
 FROM   quay.io/prometheus/busybox:latest
 LABEL  maintainer="The Prometheus Authors <prometheus-developers@googlegroups.com>"
-
+RUN make
 ARG ARCH="amd64"
 ARG OS="linux"
 COPY .build/${OS}-${ARCH}/mysqld_exporter /bin/mysqld_exporter
